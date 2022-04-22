@@ -39,12 +39,13 @@ class Api::MoviesController < ApplicationController
       head :no_content
     else
       render json: { error: movie.errors.messages }, status: 422
+    end
   end
 
   private
 
   def movie_params
-    parmas.require(:movie).permit(:name, :image_url)
+    params.require(:movie).permit(:name, :image_url)
   end
 
   def options
