@@ -8,16 +8,16 @@ const Card = styled.div`
   text-align: center;
 `
 const MoviePoster = styled.div`
-  width: 50px;
+  width: 100%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
 
   img {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
+    height: 250px;
+    width: 200px;
+    border-radius: 5px;
     border: 1px solid #efefef;
   }
 `
