@@ -5,6 +5,7 @@ import axios from 'axios';
 import Header from './Header';
 import styled from 'styled-components';
 import ReviewForm from './ReviewForm';
+import Review from './Review';
 
 const Wrapper = styled.div`
   margin-left: auto;
@@ -74,6 +75,18 @@ const Movie = () => {
     setReview({...review, score})
   }
 
+  let reviews
+  if (loaded && movie.included) {
+    reviews = movie.included.map( (item, index) => {
+      return (
+        <Review 
+          key={index}
+          attributes={item.attributes}
+        />
+      )
+    })
+  }
+
   return (
     <Wrapper>
       {
@@ -85,7 +98,7 @@ const Movie = () => {
                   attributes={movie.data.attributes}
                   reviews={movie.included}
                 />
-              <div className="reviews"></div>
+              {reviews}
             </Main>
           </Column>
           <Column>

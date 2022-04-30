@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Rating from '../Rating/Rating';
 
 const Card = styled.div`
   border: 1px solid #efefef;
@@ -46,7 +47,7 @@ const Movie = (props) => {
         <img src={props.attributes.image_url} alt={props.attributes.name} />
       </MoviePoster>
       <MovieName>{props.attributes.name}</MovieName>
-      <div className="movie-score">{props.attributes.avg_score}</div>
+      <Rating score={props.attributes.avg_score} />
       <LinkWrapper>
         <Link to={`/movies/${props.attributes.slug}`}>View Movie</Link>
       </LinkWrapper>
