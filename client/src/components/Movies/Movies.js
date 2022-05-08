@@ -14,7 +14,7 @@ const Header = styled.div`
   padding: 100px 100px 10px 100px;
 
   h1 {
-    font-size: 42px;
+    font-size: 48px;
   }
 `
 const SubHeader = styled.div`
@@ -27,6 +27,10 @@ const Grid = styled.div`
   grid-gap: 20px;
   width: 100%;
   padding: 20px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 const Movies = () => {

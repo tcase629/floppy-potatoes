@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Movies from './components/Movies/Movies';
 import Movie from './components/Movie/Movie';
+import './App.css';
 
 const App = () => (
   <>

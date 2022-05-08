@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 const Column = styled.div`
   backgroud: #fff;
