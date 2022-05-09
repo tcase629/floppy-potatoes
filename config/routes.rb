@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   get '*path', to: 'pages#index', via: :all  
+  get '*other', to: 'static#index'
 end
